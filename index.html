@@ -1,178 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html> 
+<html>
 <head>
-	<!-- Title -->
-	<title>EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences">
+  <meta name="keywords" content="Health-LLM, Wearable Sensors, Personal Health Coach">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences</title>
 
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<!-- https://fontawesome.com/cheatsheet -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124898353-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-	  	function gtag(){dataLayer.push(arguments);}
-	  	gtag('js', new Date());
-	  	gtag('config', 'UA-124898353-1');
-	</script>
+    gtag('js', new Date());
 
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/bed-svgrepo-com.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
-
-
 <body>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-		<a class="navbar-brand" href="#">EmpathicStories++</a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
-	  		<span class="navbar-toggler-icon"></span>
-		</button>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
 
-		<div class="collapse navbar-collapse" id="navbarToggle">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#Abstract">Abstract</a>
-				</li>
-                <li class="nav-item">
-					<a class="nav-link" href="#Access">Requesting Access</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#Paper">Paper</a>
-			</ul>
-		</div>
-	</nav>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ybkim95.github.io/">Jocelyn Shen</a><sup>*</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://orsonxu.com/">Yubin Kim</a><sup>*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=m7Jr-b4AAAAJ&hl=en">Mohit Hulse</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.media.mit.edu/people/cynthiab/overview/">Wazeer Zulfikar</a><sup></sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.media.mit.edu/people/haewon/overview/">Sharifa Alghowinem</a><sup></sup>,
+            </span>
+			<br>
+			<span class="author-block">
+			  <a href="https://www.media.mit.edu/people/haewon/overview/">Cynthia Breazeal</a><sup></sup>,
+			</span>
+			<span class="author-block">
+			  <a href="https://www.media.mit.edu/people/haewon/overview/">Hae Won Park</a><sup></sup>,
+			</span>
+          </div>
 
-	<div class="container" style="padding-top: 80px; font-size: 20px">
-		<div align="center">
-			<h2 class="text-center" align="center">
-				EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences
-			</h2><br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>MIT Media Lab</span>
+          </div>
 
-			<h6>
-				<a href="https://www.jocelynshen.com">Jocelyn Shen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://ybkim95.github.io/">Yubin Kim</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="">Mohit Hulse</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://www.media.mit.edu/people/wazeer/overview/">Wazeer Zulfikar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://www.media.mit.edu/people/sharifah/overview/">Sharifa Alghowinem</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.media.mit.edu/people/cynthiab/overview/">Cynthia Breazeal</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.media.mit.edu/people/haewon/overview/">Hae Won Park</a><br>
-			</h6>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdf/paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.15708"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
 
-		    <small>
-		    	<a target="_blank" href="https://www.media.mit.edu/"><font color=black>MIT Media Lab</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		    	</small>
-		</div>
-	</div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-	<div class="container" style="padding-top: 10px; font-size: 20px">
-		<div align="center">
-			<div class="center">
-				<img class="img-responsive img-rounded" src="static/datasetoverview.png" style="width:90%; height:100%" alt="">
-			</div>
-		</div>
-	</div><br>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!--video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/mainfigure.png" type="picture">
+      </video-->
+      <img src="./static/images/teaser.png" width="100%" alt="Main Figure AgentClinic">
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Health-LLM</span> is a framework for evaluating LLM performance on a diverse set of health prediction tasks, training and prompting the models with multi-modal health data.
+      </h2> -->
+    </div>
+  </div>
+</section>
 
-
-	<!-- Abstract -->
-	<div class="container">
-		<h3 id="Abstract" style="padding-top: 60px; margin-top: -80px;">Abstract</h3><hr>
-        Modeling empathy is a complex endeavor that is rooted in interpersonal and experiential dimensions of human interaction, and remains an open problem within AI. Existing empathy datasets fall short in capturing the richness of empathy responses, often being confined to in-lab or acted scenarios, lacking longitudinal data, and missing self-reported labels. We introduce a new multimodal dataset for empathy during personal experience sharing: the EmpathicStories++ dataset containing 53 hours of video, audio, and text data of 41 participants sharing vulnerable experiences and reading empathically resonant stories with an AI agent. EmpathicStories++ is the first longitudinal dataset on empathy, collected over a month-long deployment of social robots in participants' homes, as participants engage in natural, empathic storytelling interactions with AI agents. 
-        We then introduce a novel task of predicting individuals' empathy toward others' stories based on their personal experiences, evaluated in two contexts: participants' own personal shared story context and their reflections on stories they read. We benchmark this task using state-of-the-art models to pave the way for future improvements in contextualized and longitudinal empathy modeling. Our work provides a valuable resource for further research in developing empathetic AI systems and understanding the intricacies of human empathy within genuine, real-world settings.	</div><br><br>
-
-
-
-	<!-- Requesting Access -->
-	<div class="container">
-		<h3 id="Access" style="padding-top: 60px; margin-top: -80px;">Requesting Access</h3><hr>
-        To have access to the dataset, please fill out this form: <a href="https://forms.gle/JfoLfiyeto7Zt9V86">Dataset Access Request Form</a>
-        
-        
-        </div><br><br>
-
-
-        <!-- Paper -->
-	<div class="container">
-		<h3 id="Paper" style="padding-top: 80px; margin-top: -80px;">Paper</h3><hr>
-
-		<div class="row">
-			<div class="col-md-12">
-				<b>EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences</b><br>
-
-				<a href="https://www.jocelynshen.com">Jocelyn Shen</a>,
-				<a href="https://ybkim95.github.io/">Yubin Kim</a>,
-				<a href="">Mohit Hulse</a>,
-				<a href="https://www.media.mit.edu/people/wazeer/overview/">Wazeer Zulfikar</a>,
-				<a href="https://www.media.mit.edu/people/sharifah/overview/">Sharifa Alghowinem</a>,
-                <a href="https://www.media.mit.edu/people/cynthiab/overview/">Cynthia Breazeal</a>,
-                <a href="https://www.media.mit.edu/people/haewon/overview/">Hae Won Park</a>
-
-				<i><a target="_blank" href="https://iclr.cc/Conferences/2023"><font color="black">Findings of ACL 2024</font></a></i><br>
-				<a target="_blank" href="">[Paper]</a>&nbsp;&nbsp;&bull;&nbsp;
-				<a target="_blank" href="">[OpenReview]</a>
-			</div>
-		</div>
-	</div><br><br>
-
-
-
-
-	<!-- BibTeX -->
-	<div class="container" style="padding-top: 20px;">
-		<h3 id="BibTeX" style="padding-top: 80px; margin-top: -80px;">Citation</h3><hr>
-		<pre style="padding: 1.5rem; margin-right: 0; margin-left: 0; background: gainsboro;">
-@inproceedings{shen2024empathicstories,
-    title={EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences},
-    author={Shen, Jocelyn and Kim, Yubin and Hulse, Mohit and Zulfikar, Wazeer and Alghowinem, Sharifa, and Breazeal, Cynthia, and Park, Hae Won},
-    booktitle={Findings of the 62nd Annual Meeting of the Association for Computational Linguistics},
-    year={2024}
-}</pre>
-
-	</div><br>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Modeling empathy is a complex endeavor that is rooted in interpersonal and experiential dimensions of human interaction, and remains an open problem within AI. Existing empathy datasets fall short in capturing the richness of empathy responses, often being confined to in-lab or acted scenarios, lacking longitudinal data, and missing self-reported labels. We introduce a new multimodal dataset for empathy during personal experience sharing: the EmpathicStories++ dataset containing 53 hours of video, audio, and text data of 41 participants sharing vulnerable experiences and reading empathically resonant stories with an AI agent. EmpathicStories++ is the first longitudinal dataset on empathy, collected over a month-long deployment of social robots in participants' homes, as participants engage in natural, empathic storytelling interactions with AI agents. We then introduce a novel task of predicting individuals' empathy toward others' stories based on their personal experiences, evaluated in two contexts: participants' own personal shared story context and their reflections on stories they read. We benchmark this task using state-of-the-art models to pave the way for future improvements in contextualized and longitudinal empathy modeling. Our work provides a valuable resource for further research in developing empathetic AI systems and understanding the intricacies of human empathy within genuine, real-world settings.  
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-	<!-- Related -->
-	<!-- <div class="container" style="padding-top: 20px;">
-		<h3 style="padding-top: 80px; margin-top: -80px;">Related Publications</h3><hr>
-
-			<b><font color="black">Rethinking the Value of Labels for Improving Class-Imbalanced Learning</font></b><br>
-			<a target="_blank" href="http://www.mit.edu/~yuzhe">Yuzhe Yang</a>, and
-			<a target="_blank" href="http://www.mit.edu/~zhixu/">Zhi Xu</a><br>
-			<i><a target="_blank" href="https://nips.cc/Conferences/2020"><font color="black">Conference on Neural Information Processing Systems (<b>NeurIPS 2020</b>)</font></a></i><br>
-			<a target="_blank" href="https://www.mit.edu/~yuzhe/imbalanced-semi-self.html">[Project Page]</a>&nbsp;&nbsp;&bull;&nbsp;
-			<a target="_blank" href="https://arxiv.org/abs/2006.07529">[Paper]</a>&nbsp;&nbsp;&bull;&nbsp;
-			<a target="_blank" href="https://github.com/YyzHarry/imbalanced-semi-self">[Code]</a>&nbsp;&nbsp;&bull;&nbsp;
-			<a target="_blank" href="https://www.youtube.com/watch?v=XltXZ3OZvyI">[Talk]</a><br>
-
-	</div><br> -->
-
-
-	<!-- Footer -->
-	<div class="container">
-		<hr>
-		<center>
-			<footer>
-				<p>© Massachusetts Institute of Technology 2023</p>
-			</footer>
-		</center>
+<section class="section" id="BibTeX">
+	<div class="container is-max-desktop content">
+	  <h2 class="title">Citation</h2>
+	  <pre><code>@misc{shen2024empathicstories,
+	title={EmpathicStories++: A Multimodal Dataset for Empathy towards Personal Experiences}, 
+	author={Jocelyn Shen and Yubin Kim and Mohit Hulse and Wazeer Zulfikar and Sharifa Alghowinem and Cynthia Breazeal and Hae Won Park},
+	year={2024},
+	eprint={2405.15708},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL}
+}</code></pre>
 	</div>
+</section>
 
+<section class="section" id="BibTeX">
+	<div class="container is-max-desktop content">
+	  <h2 class="title">Requesting Access</h2>
+	  <div class="container" style="padding-top: 0px;">
+		To have access to the dataset, please fill out this form: <a href="https://forms.gle/JfoLfiyeto7Zt9V86">Dataset Access Request Form</a>
+		<br><br>
+	  </div><br>
+	</div>
+  </section>
 
-	<!-- Bootstrap core JavaScript -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Credit to Keunhong Park for the website template. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
-
 </html>
